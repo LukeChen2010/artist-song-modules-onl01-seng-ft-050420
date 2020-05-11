@@ -11,7 +11,7 @@ class Artist
     @songs = []
   end
 
-  
+  extend Findable
 
   def self.all
     @@all
