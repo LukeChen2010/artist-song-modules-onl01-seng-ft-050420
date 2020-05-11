@@ -2,20 +2,20 @@ require 'pry'
 
 class Song
   attr_accessor :name
-  attr_reader :artist
+  attr_reader :songs
 
   @@songs = []
 
   def initialize
-    @@all << self
+    @@songs << self
   end
 
   def self.find_by_name(name)
-    @@artists.detect {|a| a.name == name}
+    @@songs.detect {|a| a.name == name}
   end
 
   def self.all
-    @@all
+    @@songs
   end
 
   extend Memorable
