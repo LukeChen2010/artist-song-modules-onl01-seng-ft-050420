@@ -4,17 +4,17 @@ class Artist
   attr_accessor :name
   attr_reader :all
 
-  @@all = []
+  @@artists = []
 
   def initialize
-    @@all << self
+    @@artists << self
     @songs = []
   end
 
   extend Findable
 
   def self.all
-    @@all
+    @@artists
   end
 
   extend Memorable
