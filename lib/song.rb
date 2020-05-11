@@ -6,10 +6,6 @@ class Song
 
   @@songs = []
 
-  def initialize
-    @@songs << self
-  end
-
   extend Findable
   
   def self.all
